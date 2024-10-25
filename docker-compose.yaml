@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  api:
+  Nodepractice:
     build: ./Nodepractice
     container_name: docker_nodepractice_demo
     ports:
@@ -8,11 +8,4 @@ services:
     volumes:
       - ./docker_nodepractice_demo:/app
       - ./app/node_modules
-  myblog:
-    build: ./reactpracticeio
-    container_name: docker_reactpractice_demo
-    ports:
-      - '3000:3000'
-    volumes:
-      - ./reactpracticeio:/app
-      - ./app/node_modules
+  
