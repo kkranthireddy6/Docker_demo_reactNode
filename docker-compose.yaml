@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  Nodepractice:
-    build: ./Nodepractice
+  nodepractice:
+    build: ./nodepractice
     container_name: docker_nodepractice_demo
     ports:
       - '4000:4000'
