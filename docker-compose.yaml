@@ -1,7 +1,10 @@
 version: "3.8"
 services:
   nodepractice:
-    build: ./nodepractice
+    restart: always
+    build: 
+      context: ./nodepractice
+      dockerfile: Dockerfile
     container_name: docker_nodepractice_demo
     ports:
       - '4000:4000'
