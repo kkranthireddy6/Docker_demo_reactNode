@@ -16,3 +16,15 @@ services:
 
          - ./nodepractice:/app
   
+  reactractice:
+    build: 
+      context: ./reactractice
+      dockerfile: Dockerfile
+    container_name: docker_reactractice_demo
+    ports:
+      - '3010:3010'
+    volumes:
+      # don't overwrite this folder in container with the local one
+         - /app/node_modules
+         - ./reactractice:/app
+  
