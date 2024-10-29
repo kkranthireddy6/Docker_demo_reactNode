@@ -23,4 +23,10 @@ services:
     container_name: docker_reactractice_demo
     ports:
       - '3000:3000'
-  
+    volumes:
+      # don't overwrite this folder in container with the local one
+         - /app/node_modules
+         # map current local directory to the /app inside the container
+         #This is a must for development in order to update our container whenever a change to the source code is made. Without this, you would have to rebuild the image each time you make a change to source code.
+
+         - ./reactpractice:/app
