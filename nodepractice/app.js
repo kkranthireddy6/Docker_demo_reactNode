@@ -22,6 +22,13 @@ app.get('/', (req, res) => {
   ])
 })
 
+app.get('/photos', async (req, res)=>{
+  const { data } = await axios.get('https://jsonplaceholder.typicode.com/photos')
+
+  res.json(data)
+
+})
+
 app.listen(4000, () => {
   console.log('listening for requests on port 4000')
 })
